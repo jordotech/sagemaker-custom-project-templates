@@ -223,8 +223,8 @@ def lambda_handler(event, context):
         logging.error("Invalid file")
  
     # Iterate through all of the files in the extracted folder to create commmit data
-    build_data = {"branch": "main", "commit_message": "Initial Commit", "actions": []}
-    deploy_data = {"branch": "main", "commit_message": "Initial Commit [ci skip]", "actions": []}
+    build_data = {"branch": "main", "commit_message": "[FOO-123] Initial Commit", "actions": []}
+    deploy_data = {"branch": "main", "commit_message": "[FOO-123] Initial Commit [ci skip]", "actions": []}
  
     for path, _, files in os.walk(model_build_directory): 
         for name in files:
